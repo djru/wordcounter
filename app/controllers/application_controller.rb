@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     if conj
       conj
     # if the word ends in es, ed, ing, 's or s', get rid of the suffix
-  elsif word.match(/\w+(es|ed|ing|'s|s)\b/)
+  elsif word.match(/\w+(es|ed|ing|'s|(bcdfghjklmnpqrstvwxy)s)\b/i)
       word.gsub(/(?<=\w)(es|ed|ing|'s|s)\b/i, '')
     else
       word
