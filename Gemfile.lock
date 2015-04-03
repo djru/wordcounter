@@ -47,6 +47,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -88,4 +89,5 @@ PLATFORMS
 
 DEPENDENCIES
   pdf-reader
+  pg
   rails (= 4.1.7)
