@@ -1,0 +1,10 @@
+<h1>Welcome to word counter</h1>
+<h2>Select a PDF file or manually paste some text.</h2>
+
+<%= form_tag "/count", id: "form", multipart: true do %>
+  <div class="file-wrapper">
+    <div class="fake-text-link">Upload a File</div>
+    <%= file_field_tag :text, id: 'text' %>
+  </div>
+<% end %>
+<%= link_to 'Paste Text', :manual_entry, class: 'manual_entry_link' %>

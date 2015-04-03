@@ -1,0 +1,6 @@
+<h1>Welcome to word counter</h1>
+
+<%= form_tag "/count_manual",  id: 'form_manual', multipart: true do %>
+  <%= text_area_tag :text_manual, "", placeholder: 'enter your text here' %>
+  <%= submit_tag "Analyze" %>
+<% end %>

@@ -1,0 +1,5 @@
+<h1><a href="/">Top 25 words in the text</a></h1>
+<div class="row" style="font-weight: bold; border-top: none;"><span class="word">Word</span> <span class="count">Appearances in text</span></div>
+<% @freqs.each do |w,f| %>
+  <div class="row"><span class="word"><%= "#{w.capitalize}" %></span> <span class="count"><%= "#{f}" %></span></div>
+<% end %>
