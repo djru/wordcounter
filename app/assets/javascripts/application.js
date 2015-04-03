@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 document.addEventListener("DOMContentLoaded", function(e) {
   var upload_button = document.querySelector("#text");
