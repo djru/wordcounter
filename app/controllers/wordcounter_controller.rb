@@ -8,12 +8,12 @@ class WordcounterController < ApplicationController
     else
       opened_pdf = PDF::Reader.new file.tempfile
       contents = opened_pdf.pages.join(" ")
-      @freqs = analyze(contents)
+      @freqs = analyze(contents.gsub(/"/, ' '))
     end
   end
 
   def count_manual
-    @freqs = analyze(params[:text_manual])
+    @freqs = analyze(params[:text_manual].gsub(/"/, ' '))
   end
 
   private
