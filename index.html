@@ -31,6 +31,15 @@
 
 <p>This app has one dependency to handle PDF reading: pdf-reader. Adapters for Postgres and Sqlite3 are included because Rails and Heroku require that a DB adapter be present; this app does not access the database at all.</p>
 
+<h2>
+<a id="limitations" class="anchor" href="#limitations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limitations</h2>
+
+<p>The app is running on the free Heroku tier and has only one worker to compute everything and handle serving pages. Queing and parallelization have not been implemented for two reasons: time constraints and cost. Beacuse of this, the app is fairly slow for texts over a few thousand words, and cannot handle large texts at all. With more time and money to spend on hosting, the app could be sped up substantially.</p>
+
+<p>Additionally, there are invariably going to be edge cases that are not met. In testing, these cases seemed to be minimal and rare, since most pieces of text share a set of the same common english words (words like is, the, can, etc.) However, examples can be contrived to produce errors in the analysis. One way of getting around this would be to drastically expand the dictionary of irregular conjugations as they arrise. However, after a certain point the dictionary would get too large to store in memory, and would have to be offloaded to a database. This would take time and drastically slow the app down since DB transactions tend to be slower than reading from a native Ruby object. </p>
+
+<p>The app can be found <a href="http://wordcountr.herokuapp.com">here</a>.</p>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/djru/wordcounter">Wordcounter</a> is maintained by <a href="https://github.com/djru">djru</a>.</span>
 
