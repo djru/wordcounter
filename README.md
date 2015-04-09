@@ -1,4 +1,4 @@
-# Wordcounter
+# [Wordcounter](http://wordcountr.herokuapp.com)
 
 This app take input from either pasted text or a PDF, strips and de-conjugates the words of the text, and returns the 25 most frequent words.
 
